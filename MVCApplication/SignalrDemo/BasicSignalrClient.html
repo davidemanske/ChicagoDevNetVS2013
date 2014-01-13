@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="hitCount"></div>
+    <!-- replace this code with your version of jquery -->
+    <script src="Scripts/jquery-1.6.4.min.js"></script>
+    <!-- replace this code with your version of signalr -->
+    <script src="Scripts/jquery.signalR-2.0.1.min.js"></script>
+    <script>
+        $(function () {
+            var con = $.hubConnection();
+            var hub = con.createHubProxy('myHub');
+            hub.on('onHitCountUpdated', function (hitCount) {
+                $('#hitCount').text(hitCount);
+            });
+            con.start(function () {
+                hub.invoke('RecordHit');
+            });
+        });
+    </script>
+</body>
+</html>

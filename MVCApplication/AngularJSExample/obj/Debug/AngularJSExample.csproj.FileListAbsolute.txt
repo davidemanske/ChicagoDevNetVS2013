@@ -1,0 +1,6 @@
+C:\VS2013\MVCApplication\AngularJSExample\bin\AngularJSExample.dll.config
+C:\VS2013\MVCApplication\AngularJSExample\bin\AngularJSExample.dll
+C:\VS2013\MVCApplication\AngularJSExample\bin\AngularJSExample.pdb
+C:\VS2013\MVCApplication\AngularJSExample\obj\Debug\AngularJSExample.csprojResolveAssemblyReference.cache
+C:\VS2013\MVCApplication\AngularJSExample\obj\Debug\AngularJSExample.dll
+C:\VS2013\MVCApplication\AngularJSExample\obj\Debug\AngularJSExample.pdb

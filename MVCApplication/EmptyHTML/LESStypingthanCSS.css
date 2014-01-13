@@ -1,0 +1,190 @@
+﻿/* Variables */
+.class1 {
+    background-color: #ff9900;
+}
+
+.class2 {
+    background-color: #fff;
+    color: #ff9900;
+}
+
+.class3 {
+    border: 1px solid #ff9900;
+}
+
+#el {
+    color: #ff9900;
+}
+
+/* Mixins */
+.gradients {
+    background: #eaeaea;
+    background: linear-gradient(top, #eaeaea, #cccccc);
+    background: -o-linear-gradient(top, #eaeaea, #cccccc);
+    background: -ms-linear-gradient(top, #eaeaea, #cccccc);
+    background: -moz-linear-gradient(top, #eaeaea, #cccccc);
+    background: -webkit-linear-gradient(top, #eaeaea, #cccccc);
+}
+
+div {
+    background: #eaeaea;
+    background: linear-gradient(top, #eaeaea, #cccccc);
+    background: -o-linear-gradient(top, #eaeaea, #cccccc);
+    background: -ms-linear-gradient(top, #eaeaea, #cccccc);
+    background: -moz-linear-gradient(top, #eaeaea, #cccccc);
+    background: -webkit-linear-gradient(top, #eaeaea, #cccccc);
+    border: 1px solid #555;
+    border-radius: 3px;
+}
+
+/* Nested Rules */
+nav {
+    height: 40px;
+    width: 100%;
+    background: #455868;
+    border-bottom: 2px solid #283744;
+}
+
+nav li {
+    width: 600px;
+    height: 40px;
+}
+
+nav li a {
+    color: #fff;
+    line-height: 40px;
+    text-shadow: 1px 1px 0px #283744;
+}
+
+/* Operations */
+.element-A {
+    height: 100px;
+}
+
+.element-Istwotimesbigger {
+    height: 200px;
+}
+
+/* Scope */
+header {
+    background-color: #000000;
+}
+
+header nav {
+    background-color: #0000ff;
+}
+
+header nav a {
+    color: #0000ff;
+}
+
+/* Top 10 LESS Features You Should Steal */
+/* Border Radius with Browser Styles and Default */
+#somediv {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+/* Border Radius Advanced with Browser Styles and Defaults */
+#somediv2 {
+    -webkit-border-radius: 20px 20px 0px 0px;
+    -moz-border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+/* Box Shadow with Browser Styles and Defaults */
+#somediv3 {
+    -webkit-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Transitions with Browser Styles and Defaults */
+#somediv4 {
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
+
+#somediv4:hover {
+    opacity: 0;
+}
+
+/* Transforms with Browser Styles and Defaults  */
+#someDiv5 {
+    -webkit-transform: rotate(5deg) scale(0.5) skew(1deg) translate(0px);
+    -moz-transform: rotate(5deg) scale(0.5) skew(1deg) translate(0px);
+    -o-transform: rotate(5deg) scale(0.5) skew(1deg) translate(0px);
+    -ms-transform: rotate(5deg) scale(0.5) skew(1deg) translate(0px);
+    transform: rotate(5deg) scale(0.5) skew(1deg) translate(0px);
+}
+
+/* Linear Gradients */
+#someDiv6 {
+    background-color: #663333;
+    background-image: -webkit-linear-gradient(left, #663333, #333333);
+    background-image: -moz-linear-gradient(left, #663333, #333333);
+    background-image: -o-linear-gradient(left, #663333, #333333);
+    background-image: -ms-linear-gradient(left, #663333, #333333);
+    background-image: linear-gradient(left, #663333, #333333);
+}
+
+/* Quick Gradient */
+#somediv7 {
+    background-color: BADA55;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+}
+
+/* Webkit Reflection */
+#somediv8 {
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, transparent), to(rgba(255, 255, 255, 0.2)));
+}
+
+/* Complementary Color Scheme */
+.complementary-one {
+    color: #663333;
+}
+
+.complementary-two {
+    color: #336666;
+}
+
+.complementary-three {
+    color: #2b5555;
+}
+
+.complementary-four {
+    color: #994d4d;
+}
+
+.complementary-five {
+    color: #bb7777;
+}
+
+/* Subtle Color Scheme */
+.subtle-one {
+    color: #663333;
+}
+
+.subtle-two {
+    color: #884a44;
+}
+
+.subtle-three {
+    color: #aa6355;
+}
+
+.subtle-four {
+    color: #442225;
+}
+
+.subtle-five {
+    color: #221114;
+}

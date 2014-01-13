@@ -1,0 +1,260 @@
+﻿/* Variables */
+@color-base: #ff9900;  
+  
+.class1 {  
+    background-color: @color-base;  
+}  
+.class2 {  
+    background-color: #fff;  
+    color: @color-base;  
+}  
+.class3 {  
+    border: 1px solid @color-base;  
+}  
+
+#el {
+    color: @color-base;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mixins */
+.gradients {  
+    background: #eaeaea;   
+    background: linear-gradient(top, #eaeaea, #cccccc);  
+    background: -o-linear-gradient(top, #eaeaea, #cccccc);   
+    background: -ms-linear-gradient(top, #eaeaea, #cccccc);   
+    background: -moz-linear-gradient(top, #eaeaea, #cccccc);   
+    background: -webkit-linear-gradient(top, #eaeaea, #cccccc);   
+}  
+
+div {  
+    .gradients;  
+    border: 1px solid #555;  
+    border-radius: 3px;  
+}  
+
+
+
+
+
+
+
+
+
+
+nav {
+
+}
+
+nav li {
+
+}
+
+nav li a {
+
+}
+
+
+/* Nested Rules */
+nav {  
+    height: 40px;  
+    width: 100%;  
+    background: #455868;  
+    border-bottom: 2px solid #283744;  
+    li {  
+        width: 600px;  
+        height: 40px;  
+        a {  
+            color: #fff;  
+            line-height: 40px;  
+            text-shadow: 1px 1px 0px #283744;  
+        }  
+    }  
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Operations */
+@height: 100px; 
+  
+.element-A {  
+    height: @height;      
+}  
+.element-Istwotimesbigger {  
+    height: @height * 2;  
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Scope */
+header {  
+    @color: black;  
+    background-color: @color;  
+    nav {  
+        @color: blue;  
+        background-color: @color;  
+        a {  
+            color: @color;  
+        }  
+    }     
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Top 10 LESS Features You Should Steal */
+
+/* Border Radius with Browser Styles and Default */
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+#somediv {
+    .border-radius(20px);
+} 
+
+/* Border Radius Advanced with Browser Styles and Defaults */
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+    -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+    -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+    border-radius: @topleft @topright @bottomright @bottomleft;
+}
+#somediv2 {
+    .border-radius-custom(20px, 20px, 0px, 0px);
+} 
+
+/* Box Shadow with Browser Styles and Defaults */
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.5) {
+    -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+    -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+    box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+#somediv3 {
+    .box-shadow(5px, 5px, 6px, 0.3);
+} 
+
+/* Transitions with Browser Styles and Defaults */
+.transition (@prop: all, @time: 1s, @ease: linear) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition: @prop @time @ease;
+    -o-transition: @prop @time @ease;
+    -ms-transition: @prop @time @ease;
+    transition: @prop @time @ease;
+}
+#somediv4 {
+    .transition(all, 0.5s, ease-in);
+} 
+#somediv4:hover {
+    opacity: 0;
+} 
+
+/* Transforms with Browser Styles and Defaults  */
+.transform (@rotate: 90deg, @scale: 1, @skew: 1deg, @translate: 10px) {
+    -webkit-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -moz-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -o-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    -ms-transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+    transform: rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
+}
+#someDiv5 {
+    .transform(5deg, 0.5, 1deg, 0px);
+} 
+
+/* Linear Gradients */
+.gradient (@origin: left, @start: #ffffff, @stop: #000000) {
+    background-color: @start;
+    background-image: -webkit-linear-gradient(@origin, @start, @stop);
+    background-image: -moz-linear-gradient(@origin, @start, @stop);
+    background-image: -o-linear-gradient(@origin, @start, @stop);
+    background-image: -ms-linear-gradient(@origin, @start, @stop);
+    background-image: linear-gradient(@origin, @start, @stop);
+}
+#someDiv6 {
+    .gradient(left, #663333, #333333);
+}
+
+/* Quick Gradient */
+.quick-gradient (@origin: left, @alpha: 0.2) {
+    background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -moz-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -o-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -ms-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+}
+#somediv7 {
+    background-color: BADA55;
+    .quick-gradient(top, 0.2);
+}
+
+/* Webkit Reflection */
+.reflect (@length: 50%, @opacity: 0.2){
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(@length, transparent), to(rgba(255,255,255,@opacity)));
+}
+#somediv8 {
+    .reflect(20%, 0.2);
+}
+
+/* Complementary Color Scheme */
+@base: #663333;
+@complement1: spin(@base, 180);
+@complement2: darken(spin(@base, 180), 5%);
+@lighten1: lighten(@base, 15%);
+@lighten2: lighten(@base, 30%);
+.complementary-one   {color: @base;}
+.complementary-two   {color: @complement1;}
+.complementary-three {color: @complement2;}
+.complementary-four  {color: @lighten1;}
+.complementary-five  {color: @lighten2;}
+
+/* Subtle Color Scheme */
+@base: #663333;
+@lighter1: lighten(spin(@base, 5), 10%);
+@lighter2: lighten(spin(@base, 10), 20%);
+@darker1: darken(spin(@base, -5), 10%);
+@darker2: darken(spin(@base, -10), 20%);
+.subtle-one   {color: @base;}
+.subtle-two   {color: @lighter1;}
+.subtle-three {color: @lighter2;}
+.subtle-four  {color: @darker1;}
+.subtle-five  {color: @darker2;}
